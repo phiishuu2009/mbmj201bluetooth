@@ -1,9 +1,7 @@
 bluetooth.startTemperatureService()
-bluetooth.startButtonService()
 basic.showIcon(IconNames.Heart)
+basic.pause(1000)
 basic.forever(function () {
-    for (let num = 0; num <= 9; num++) {
-        basic.showNumber(num)
-        basic.pause(1000)
-    }
+    basic.showNumber(input.temperature())
+    basic.pause(1000)
 })
